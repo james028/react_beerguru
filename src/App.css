@@ -1,0 +1,18 @@
+.single-item {
+  display: flex;
+  flex-direction: row;
+  width: 1240px;
+}
+
+:root {
+  --bodyMaxWidth: 1240px;
+}
+.row {
+  display: flex;
+  max-width: var(--bodyMaxWidth);
+  margin: auto;
+}
+.col {
+  display: flex;
+  flex-wrap: wrap;
+}

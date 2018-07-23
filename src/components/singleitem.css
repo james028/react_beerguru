@@ -1,0 +1,15 @@
+.single-item-one {
+    width: 30%;
+    height: 200px;
+    background-color: salmon;
+    margin: 10px;
+}
+.single-item-one:hover {
+
+}
+.single-item-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffc300;
+    text-align: center;
+}

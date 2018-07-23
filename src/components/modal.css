@@ -1,0 +1,11 @@
+.modal {
+    position: fixed;
+    height: 400px;
+    top: 20%;
+    width: calc( 50% - 50px );
+    margin-left: 25%;
+    background-color: #fff;
+    border: 1px solid #000;
+    z-index: 400;
+    overflow: hidden;
+}
