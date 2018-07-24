@@ -3,9 +3,10 @@
     height: 200px;
     background-color: salmon;
     margin: 10px;
+    transition: transform 0.2s linear;
 }
 .single-item-one:hover {
-
+    transform: scale(1.07);
 }
 .single-item-title {
     font-size: 20px;
