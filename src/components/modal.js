@@ -23,12 +23,12 @@ componentDidUpdate() {
     render () {
         let post = 'aa';
         if (this.props.idik) {
-            post = '<p>LOading..</p>';
+            post = 'Loading...';
         }
         if (this.state.postLoad) {
             post = (
                 <div className="FullPost">
-                    <h1>test{this.state.postLoad.name}</h1>
+                    <h1>test{this.state.postLoad[0].name}</h1>
                 </div>
             );
         }
