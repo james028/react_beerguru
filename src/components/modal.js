@@ -11,7 +11,7 @@ state = {
 componentDidUpdate() {
         if (this.props.idik) {
             if (!this.state.postLoad || (this.state.postLoad && this.state.postLoad.idik !== this.props.idik)) {
-                axios.get(`https://api.punkapi.com/v2/beers/${this.props.idik}`)
+                axios.get('https://api.punkapi.com/v2/beers/' + this.props.idik)
                     .then(response => {
                         //console.log(response)
                         this.setState({postLoad: response.data})
@@ -20,22 +20,20 @@ componentDidUpdate() {
         }
     }
 
-  render() {
-        let post = '';
+    render () {
+        let post = 'aa';
         if (this.props.idik) {
             post = '<p>LOading..</p>';
         }
         if (this.state.postLoad) {
-                post = (
-                    <div className="modal">
-                        <h1>ss{this.state.postLoad.id}</h1>
-                        <p>Content</p>
-                    </div>
-        
-                );
-            }
-            return post;
-  }
+            post = (
+                <div className="FullPost">
+                    <h1>test{this.state.postLoad.name}</h1>
+                </div>
+            );
+        }
+        return post;
+    }
 }
 
 export default Modal;
