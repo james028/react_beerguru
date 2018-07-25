@@ -8,11 +8,12 @@ class SingleItem extends Component {
     
     const BackgroundImage = {
         width: '80px',
-        height: '70%',
+        height: '60%',
         backgroundImage: `url(${this.props.image})`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
-        margin: '10px auto'
+        margin: '10px auto',
+        marginLeft: '38%'
     };  
 
     return (
@@ -20,7 +21,7 @@ class SingleItem extends Component {
                 <div style={BackgroundImage}></div>
                 <div>
                     <p className="single-item-title">{this.props.name}</p>
-                    <p>{this.props.tagline}</p>
+                    <p className="single-item-down">{this.props.tagline}</p>
                 </div>
             </div>
     )

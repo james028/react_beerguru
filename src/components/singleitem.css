@@ -1,12 +1,21 @@
 .single-item-one {
-    width: 30%;
-    height: 200px;
-    background-color: salmon;
-    margin: 10px;
+    width: 25%;
+    height: 300px;
+    background-color: #fff;
+    margin: 22px;
+    border-radius: 3px;
+    border: 0.5 solid #fafafa;
     transition: transform 0.2s linear;
+    transition: box-shadow 0.1s linear; 
+    cursor: pointer;
+    z-index: 800;
+    box-shadow: 0;
+    padding: 20px;
+    text-align: center;
 }
 .single-item-one:hover {
     transform: scale(1.07);
+    box-shadow: -1px -1px 59px 3px rgba(199,173,173,1);
 }
 .single-item-title {
     font-size: 20px;
@@ -14,3 +23,7 @@
     color: #ffc300;
     text-align: center;
 }
+.single-item-down {
+    font-size: 18px;
+}
+

@@ -1,10 +1,20 @@
 .modal {
-    height: 400px;
-    width: 300px;
-    background-color: blue;
-    border: 1px solid #000;
+    height: 85vh;
+    width: calc( 70% - 50px);
+    left: 15%;
+    background-color: #fff;
+    border: 0.5px solid #000;
+    border-radius: 3px;
     overflow: hidden;
-    z-index: 400;
+    z-index: 999;
     position: fixed;
-    top: 20%;
+    top: 7%;
+}
+.loading {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    color: coral;
 }

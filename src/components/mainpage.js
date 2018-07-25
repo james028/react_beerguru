@@ -69,7 +69,7 @@ class MainPage extends Component {
         this.setState({
             loadItemPart: id
         })
-        console.log("click");
+        this.handleClickModal();
     }
 
 
@@ -77,26 +77,33 @@ class MainPage extends Component {
     return (
       <div className="row">
                 <InfiniteScroll
+                style={{overflow: 'hidden'}}
                  dataLength={this.state.items.length}
                  next={this.fetchMoreData}
                  hasMore={this.state.hasMore}
-                 loader={<p style={{ textAlign: "center" }}>Loading...</p>}
+                 loader={<p style={{ textAlign: "center" }}>
+                    <b>Loading...</b>
+                 </p>}
                  endMessage={
                    <p style={{ textAlign: "center" }}>
-                     <b>Yay! You have seen it all</b>
+                     <b>You have seen it all</b>
                    </p>
                  }
                 >
-                <div className="col">
-                <Modal idik={this.state.loadItemPart}/>
-                    {this.state.beers.map((e,i) => {
-                        return <SingleItem 
-                        clicked={() => this.handleClickOnItem(e.id)}
-                        key={i}
-                        image={e.image_url}
-                        tagline={e.tagline}
-                        name={e.name}/>  
-                    })} 
+                    <div className="title"><span className="title-span">beer</span>guru</div>
+                    <Modal 
+                    close={this.handleClickModalClose}
+                    modal={this.state.modal}
+                    idik={this.state.loadItemPart}/>
+                        <div className="col">
+                            {this.state.beers.map((e,i) => {
+                                return <SingleItem 
+                                clicked={() => this.handleClickOnItem(e.id)}
+                                key={i}
+                                image={e.image_url}
+                                tagline={e.tagline}
+                                name={e.name}/>  
+                            })} 
                      </div>
                 </InfiniteScroll>  
            
