@@ -17,13 +17,13 @@ class SingleItem extends Component {
     };  
 
     return (
-            <div className="single-item-one" onClick={this.props.clicked}>
-                <div style={BackgroundImage}></div>
+        <div className="single-item-one" onClick={this.props.clicked}>
+            <div style={BackgroundImage}></div>
                 <div>
                     <p className="single-item-title">{this.props.name}</p>
                     <p className="single-item-down">{this.props.tagline}</p>
                 </div>
-            </div>
+        </div>
     )
   }
 }

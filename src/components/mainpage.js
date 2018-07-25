@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SingleItem from './singleitem'
-import Modal from './modal'
+import Modal from './Modal/modal'
 import InfiniteScroll from "react-infinite-scroll-component";
 import axios from 'axios';
 
@@ -23,15 +23,9 @@ class MainPage extends Component {
     }
 
     fetchData() {
-        //const url = 'https://api.punkapi.com/v2/beers';
+        const url = 'https://api.punkapi.com/v2/beers';
 
-        //fetch(url)
-            //.then(response => response.json())
-            //.then(data => this.setState({
-                //beers: data
-            //}));
-
-            axios.get('https://api.punkapi.com/v2/beers')
+            axios.get(url)
             .then(response => {
                 this.setState({
                     beers: response.data
@@ -51,11 +45,11 @@ class MainPage extends Component {
         }, 500);
       };
 
+
     handleClickModal = () => {
         this.setState({
             modal: true,
         })
-        console.log("ok");
     }
 
 
@@ -77,12 +71,12 @@ class MainPage extends Component {
     return (
       <div className="row">
                 <InfiniteScroll
-                style={{overflow: 'hidden'}}
+                 style={{overflow: 'hidden'}}
                  dataLength={this.state.items.length}
                  next={this.fetchMoreData}
                  hasMore={this.state.hasMore}
                  loader={<p style={{ textAlign: "center" }}>
-                    <b>Loading...</b>
+                    Loading...
                  </p>}
                  endMessage={
                    <p style={{ textAlign: "center" }}>

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './modal.css'
 import axios from 'axios';
 import Backdrop from './backdrop';
+import Details from '../Details/details'
 
 class Modal extends Component {
 
@@ -35,10 +36,14 @@ componentDidUpdate() {
                     <div className="modal" style={{opacity: this.props.modal ? '1' : '0',
                                                     visibility: this.props.modal ? 'visible' : 'hidden'}}                        
                     >
-                        <div>
-                            <h1>test{this.state.postLoad.id}</h1>
-                            <h1>test{this.state.postLoad.srm}</h1>
-                        </div>
+                    <Details 
+                    brewer={this.state.postLoad.brewers_tips}
+                    abv={this.state.postLoad.abv}
+                    ibu={this.state.postLoad.ibu}
+                    image={this.state.postLoad.image_url}
+                    desc={this.state.postLoad.description}
+                    tagline={this.state.postLoad.tagline}
+                    name={this.state.postLoad.name}/>
                     </div>
                 </div>
             );
