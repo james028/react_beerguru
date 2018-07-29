@@ -13,7 +13,7 @@ state = {
 componentDidUpdate() {
         if (this.props.idik) {
             if (!this.state.postLoad || (this.state.postLoad && this.state.postLoad.idik !== this.props.idik)) {
-                axios.get('https://api.punkapi.com/v2/beers/' + this.props.idik)
+                axios.get(`https://api.punkapi.com/v2/beers/${this.props.idik}`)
                     .then(response => {
                         //console.log(response)
                         this.setState({postLoad: response.data[0]})
